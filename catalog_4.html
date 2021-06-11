@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astral Dreams Records - Catalog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/slider.css">
+  
+  <link rel="stylesheet" href="css/purchasebutton.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/right_sidebar.css">
+    <script src="js/button_trigger.js"></script> 
+
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <div class="nav" id="nav_skin">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <img src="img/logo/astral dreams logo small.png" class="logo_top_left">
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="shipping.html">Order</a>
+            <a href="catalog.html"><b>Catalogue</b></a>
+            <a href="contact_us.html">Contact Us</a>
+            <a href="javascript:rightTrigger();"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+    </div>
+<!-- NAVBAR END -->
+
+<!-- LEFT SIDEBAR SLIDEOUT MENU START any explanation regarding this section will be explained in left_sidebar.css -->
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+<div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+        <li style="padding: 0; border: 0; float: right;">
+            <div style="width: 50px; height: 50px; color: black; position: sticky; top: 30%; opacity: 0.5;"  onclick=leftTrigger()>
+                <div style="margin: 30% 30%;">
+                    <i class="fa fa-times" aria-hidden="true" style="font-size: 32px;"></i>
+                </div>
+            </div>
+        </li>
+        <br><br><br><br>
+        <li style="border: 0;">
+            <input type="text" placeholder="Search our store" style="border: 0; width: 80%; border-bottom: 2px white solid; background-color: transparent; color: white; font-size: 24px;">
+            <i class="fa fa-search" aria-hidden="true" style="font-size: 32px; color:white;"></i>
+        </li>
+    </ul>
+</div>
+<!-- LEFT SIDEBAR SLIDEOUT MENU END -->
+
+<!-- RIGHT SIDEBAR SLIDEOUT MENU START any explanation regarding this section will be explained in right_sidebar.css -->
+<input type="checkbox" class="right_openSidebarMenu" id="right_openSidebarMenu">
+<div id="right_sidebarMenu">
+    <ul class="right_sidebarMenuInner">
+        <li style="padding: 0; border: 0; float: right;">
+            <div style="width: 50px; height: 50px; color: black; position: sticky; top: 30%; opacity: 0.5;"  onclick=rightTrigger()>
+                <div style="margin: 30% 30%;">
+                    <i class="fa fa-times" aria-hidden="true" style="font-size: 32px; color: white;"></i>
+                </div>
+            </div>
+        </li>
+        <li style="background-color: black;">
+            <span style="color: white;">SHOPPING CART</span>
+        </li>
+        <li style="border: 0">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <img class="gallery_display" src="img/alan Trahan firm roots.jpg" /> 
+                </div>
+                <div class="col-xs-7 col-sm-7 col-md-7">
+                    <b>ALAN TRAJAN</b><br>
+                    <i>FIRM ROOTS</i>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <div class="an_item" style="border: 2px solid white; border-radius: 50px; width: 110px;">
+                                <button style="padding: 8px;">-</button>
+                                <input type="number" step="1" min="0" max="" value="1" style="width: 40px; background-color: transparent; color: white; border: 0;" class="item_quantity" size="4" pattern="[0-9]*" inputmode="numeric">
+                                <button style="padding: 8px;">+</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <input type="text" value="EUR 200" style="width: 80px; margin: 10px auto;">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1">
+                    <i class="fa fa-times" aria-hidden="true" style="font-size: 32px; color: white;"></i>
+                </div>
+            </div>
+            <br>
+        </li>
+        <li style="background-color: black; position: sticky; bottom: 0; position: fixed; width: 100%;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <span style="color: white; font-weight: bold; font-size: 18px;">SUBTOTAL</span><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-sm-10 col-md-10">
+                    <span style="color: white; text-align: left; font-size: 9px;">
+                        Shipping and taxes calculated at checkout
+                    </span>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <span style="color: white; text-align: right; font-size: 15px;">
+                        EUR 200
+                    </span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div style="float:right">
+                        <a href="payment.html" style="padding: 5px; border: 2px solid white; background-color: black; color: white; border-radius: 25px;">
+                            CHECKOUT <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+    <!-- RIGHT SIDEBAR SLIDEOUT MENU END -->
+
+<!-- LEFT SIDEBAR TRIGGER START -->
+<div style="width: 50px; height: 50px; margin-top: -50px; background-color: grey; color: black; position: sticky; top: 30%;"  onclick=leftTrigger()>
+    <div style="margin: 30% 30%;">
+        <i class="fa fa-search" aria-hidden="true" style="font-size: 18px;"></i>
+    </div>
+</div>
+<!-- LEFT SIDEBAR TRIGGER END -->
+<div class="section_no_viewport">
+    <div class="row" style="grid-gap: 0;">
+        <div class="offset-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <h3 style="color: white;">Catalogue > Jazz</h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2"></div>
+    </div>
+    <div class="row" style="grid-gap: 0;">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <h2 style="text-align: center; color: white;"><u>CATALOGUE</u></h2>
+        </div>
+    </div>
+    <div class="row" style="grid-gap: 0;">
+        <div class="offset-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <h6 style="text-align: right; color: white;" class="sort_catalog">
+                <u>Sort By</u>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </h6>
+            <!-- The sort menu popup is triggered after a pointer hover over the .sort_catalog element, which change the visibility of .sort_hide div -->
+            <div class="sort_hide" style="background-color: grey; color: black; border: 2px solid black; position: absolute; padding: 20px; top: 253px; right: 330px;">
+                <span style="color: white; float: right;">SORT BY <i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                <br><br>
+                <div style="text-align:center; color: white;">
+                    Featured<br>
+                    Best Selling<br>
+                    Alphabetically (A-Z)<br>
+                    Alphabetically (Z-A)<br>
+                    Price (low-high)<br>
+                    Price (high-low)<br>
+                    Date (new-old)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/David Holland Quartet.jpg" /> 
+      
+              <strong>DAVID HOLLAND QUARTET </strong><br>
+              <em>CONFERENCE OF THE BIRDS</em> <br>
+              UK/1977
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 30</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/Don Ellis Orchestra.jpg" /> 
+      
+              <strong>DON ELLIS ORCHESTRA </strong><br>
+              <em>LIVE IN 3 2/3:4 TIME</em> <br>
+              UK/1967
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 30</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/Elton Dean.jpg" /> 
+      
+              <strong> ELTON DEAN </strong><br>
+              <em>SAME CBS</em> <br>
+              UK/1971
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 60</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/Globe Unity.jpg" /> 
+      
+              <strong>GLOBE UNITY</strong><br>
+              <em>COMPOSITIONS JAPO</em> <br>
+              UK/1978
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 30</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="offset-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/Humphrey Lyttelton.jpg" /> 
+      
+              <strong>HUMPREY LYTTELTON </strong><br>
+              <em>PARLOPHONE YEARS</em> <br>
+              UK/1970
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 50</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/Jimmy skidmore Skid marks .jpg" /> 
+      
+              <strong>JIMMY SKIDMORE </strong><br>
+              <em> SKID MARKS</em> <br>
+              UK/1972
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 150</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/John Coltrane .jpg" /> 
+      
+              <strong>JOHN COLTRANE</strong><br>
+              <em>MEDITATIONS</em> <br>
+              UK/1972
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 40</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2">
+            <div style="color:white" onclick="javascript:window.location = 'individual_product_listing.html'">
+              <img class="gallery_display" src="img/John Suharman.jpg" /> 
+      
+              <strong>JOHN SURMAN/WARREN</strong><br>
+              <em>TALES OF ALONQUIN</em> <br>
+              UK/1971
+      
+              <div id="buy_button" style="text-align: right;">
+                <button>EUR 190</button>
+              </div>
+            </div>
+            <div style="position: relative;">
+                <a href="javascript:alert('adding item to cart')" ><div class="gallery_label_add_to_cart">ADD TO CART</div></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="offset-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-2"></div>
+        <div class="col-xs-6 col-sm-6 col-md-4">
+            <div style="color: white; text-align: center;">
+                <span style="padding: 0 5px; color: black; background-color: white; border: 1px solid black; border-radius: 50%;">1</span> 2 3 4 5 6 7 8 9 10 ...
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+            <div style="color: white; text-align: right;">
+                Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Explanation regarding the footer class will be written in body.css -->
+<div class="footer" style="color: white;">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-xs-12 col-sm-12 col-md-3 padding-left-xs-fix">
+            <br>
+            <p>Lucio Corsini
+            <br>Via Nuova Di Fontia 28
+            <br>54033 Carrara (MS) - ITALY
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 padding-left-xs-fix">
+            <p>
+                <p>SIGN UP FOR NEWS LETTER</p>
+                <br>
+                <input type="text" placeholder="Enter email address" style="width: 20em">
+                <br>
+                <br>
+                <br>
+                @Astral Dream Record - All Rights Reserved
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 padding-left-xs-fix">
+            <br>
+            <p>
+                Tel 0585846403
+                <br>Fax 0585847233
+                <br>Mobile 03355429590
+                <br>Email: lucio@astraldream.com 
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
