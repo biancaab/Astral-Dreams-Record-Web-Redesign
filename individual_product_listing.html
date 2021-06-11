@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Astral Dreams Records - Alan Trajan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
@@ -11,56 +10,39 @@
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/header.css">
 
-    <link rel="stylesheet" href="css/purchasebutton.css">
-    <link rel="stylesheet" href="css/left_sidebar.css">
-    <link rel="stylesheet" href="css/right_sidebar.css">
-    <script src="js/button_trigger.js"></script> 
-    
     <script>
-        // This function is used to change the image in the top left item display image, the main image can be changed by clicking smaller images below it
         function myFunction(imgs) {
-            var expandImg = document.getElementById("expandedImg"); //get the html element id
-            expandImg.src = imgs.src; //change the image source
-            expandImg.parentElement.style.display = "block"; //make it visible
+            var expandImg = document.getElementById("expandedImg");
+            expandImg.src = imgs.src;
+            expandImg.parentElement.style.display = "block";
         }
 
         function openModal() {
-            document.getElementById("myModal").style.display = "block"; //make the image popup visible
+            document.getElementById("myModal").style.display = "block";
         }
 
         function closeModal() {
-        document.getElementById("myModal").style.display = "none"; //make the image popup invisible
+        document.getElementById("myModal").style.display = "none";
         }
 
         var slideIndex = 1;
         showSlides(slideIndex);
 
-        //next image slide
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        //prev image slide
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
 
         function showSlides(n) {
             var i;
-            var slides = document.getElementsByClassName("mySlides"); //reading the div which all images are stored for this context
-            var dots = document.getElementsByClassName("demo");  //reading the div which all thumbnails are stored for this context
-            var captionText = document.getElementById("caption"); //image number indicator
-
-            //for example I have 5 images, and once i reach the end of the image, the slide index resets, therefore we will reach the first picture again
-            if (n > slides.length){ 
-                slideIndex = 1
-            }
-
-            //same case as above, but on the opposite, this is when the image slider is selected or previous until the very first picture, 
-            //if the index is lower than one (can't be negative), the index is reset to the last index
-            if (n < 1) {
-                slideIndex = slides.length
-            }
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
             }
@@ -74,7 +56,6 @@
     </script>
 </head>
 <body>
-    <!-- NAVBAR START -->
     <div class="nav" id="nav_skin">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
@@ -98,111 +79,7 @@
             <a href="javascript:rightTrigger();"><i class="fa fa-shopping-cart"></i></a>
         </div>
     </div>
-    <!-- NAVBAR END -->
 
-    <!-- LEFT SIDEBAR SLIDEOUT MENU START any explanation regarding this section will be explained in left_sidebar.css -->
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-    <div id="sidebarMenu">
-        <ul class="sidebarMenuInner">
-            <li style="padding: 0; border: 0; float: right;">
-                <div style="width: 50px; height: 50px; color: black; position: sticky; top: 30%; opacity: 0.5;"  onclick=leftTrigger()>
-                    <div style="margin: 30% 30%;">
-                        <i class="fa fa-times" aria-hidden="true" style="font-size: 32px;"></i>
-                    </div>
-                </div>
-            </li>
-            <br><br><br><br>
-            <li style="border: 0;">
-                <input type="text" placeholder="Search our store" style="border: 0; width: 80%; border-bottom: 2px white solid; background-color: transparent; color: white; font-size: 24px;">
-                <i class="fa fa-search" aria-hidden="true" style="font-size: 32px; color: white;"></i>
-            </li>
-        </ul>
-    </div>
-    <!-- LEFT SIDEBAR SLIDEOUT MENU END -->
-
-<!-- RIGHT SIDEBAR SLIDEOUT MENU START any explanation regarding this section will be explained in right_sidebar.css -->
-    <input type="checkbox" class="right_openSidebarMenu" id="right_openSidebarMenu">
-    <div id="right_sidebarMenu">
-        <ul class="right_sidebarMenuInner">
-            <li style="padding: 0; border: 0; float: right;">
-                <div style="width: 50px; height: 50px; color: black; position: sticky; top: 30%; opacity: 0.5;"  onclick=rightTrigger()>
-                    <div style="margin: 30% 30%;">
-                        <i class="fa fa-times" aria-hidden="true" style="font-size: 32px; color: white;"></i>
-                    </div>
-                </div>
-            </li>
-            <li style="background-color: black;">
-                <span style="color: white;">SHOPPING CART</span>
-            </li>
-            <li style="border: 0">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-4 col-md-4">
-                        <img class="gallery_display" src="img/alan Trahan firm roots.jpg" /> 
-                    </div>
-                    <div class="col-xs-7 col-sm-7 col-md-7">
-                        <b>ALAN TRAJAN</b><br>
-                        <i>FIRM ROOTS</i>
-                        <br><br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6">
-                                <div class="an_item" style="border: 2px solid white; border-radius: 50px; width: 110px;">
-                                    <button style="padding: 8px;">-</button>
-                                    <input type="number" step="1" min="0" max="" value="1" style="width: 40px; background-color: transparent; color: white; border: 0;" class="item_quantity" size="4" pattern="[0-9]*" inputmode="numeric">
-                                    <button style="padding: 8px;">+</button>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6">
-                                <input type="text" value="EUR 200" style="width: 80px; margin: 10px auto;">
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1">
-                        <i class="fa fa-times" aria-hidden="true" style="font-size: 32px; color: white;"></i>
-                    </div>
-                </div>
-                <br>
-            </li>
-            <li style="background-color: black; position: sticky; bottom: 0; position: fixed; width: 100%;">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <span style="color: white; font-weight: bold; font-size: 18px;">SUBTOTAL</span><br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-10 col-sm-10 col-md-10">
-                        <span style="color: white; text-align: left; font-size: 9px;">
-                            Shipping and taxes calculated at checkout
-                        </span>
-                    </div>
-                    <div class="col-xs-2 col-sm-2 col-md-2">
-                        <span style="color: white; text-align: right; font-size: 15px;">
-                            EUR 200
-                        </span>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div style="float:right">
-                            <a href="payment.html" style="padding: 5px; border: 2px solid white; background-color: black; color: white; border-radius: 25px;">
-                                CHECKOUT <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-- RIGHT SIDEBAR SLIDEOUT MENU END -->
-
-<!-- LEFT SIDEBAR TRIGGER START -->
-    <div style="width: 50px; height: 50px; margin-top: -50px; background-color: grey; color: black; position: sticky; top: 30%;"  onclick=leftTrigger()>
-        <div style="margin: 30% 30%;">
-            <i class="fa fa-search" aria-hidden="true" style="font-size: 18px;"></i>
-        </div>
-    </div>
-<!-- LEFT SIDEBAR TRIGGER END -->
 
 <div class="section_no_viewport">
     <div class="row" style="grid-gap: 0;">
@@ -220,11 +97,9 @@
             <div class="no_margin_mobile" style="color: white;">
                 <div class="image_tab_container" style="text-align: center;">
                     <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
-                    <!-- If the image is clicked, the image popup is called, and the current image will be shown in the modal -->
                     <img src="img/Alan Trajan/alan Trahan firm roots.jpg" id="expandedImg" style="max-height: 338px; width:100%;" onclick="openModal();currentSlide(1)">
                 </div> 
 
-                <!-- image changer -->
                 <div class="row_image">
                     <div class="column">
                         <img src="img/Alan Trajan/alan Trahan firm roots.jpg" onclick="myFunction(this);">
@@ -245,7 +120,7 @@
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div style="text-align: center;"> <em>*Actual vinyl color may differ from image</em></div>
+                        <div style="text-align: center;"><em>*Actual vinyl color may differ from image </em></div>
                         <a href="#" class="lightbox" id="img1">
                             <span style="background-image: url('https://picsum.photos/seed/9/900/450')"></span>
                           </a>
@@ -436,7 +311,7 @@
                     
                             <strong>ACE </strong><br>
                             <em>NO STRINGS</em> <br>
-                            UK/1977
+                            Uk1977
                         </div>
                     </div>
                 
@@ -516,23 +391,23 @@
         </div>
 
         <div class="lightbox_column">
-            <img class="demo" src="img/Alan Trajan/alan Trahan firm roots.jpg" onclick="currentSlide(1)" alt="Nature">
+            <img class="demo" src="img/Alan Trajan/alan Trahan firm roots.jpg" onclick="currentSlide(1)" alt="Firm Roote">
         </div>
 
         <div class="lightbox_column">
-            <img class="demo" src="img/Alan Trajan/back side.png" onclick="currentSlide(2)" alt="Snow">
+            <img class="demo" src="img/Alan Trajan/back side.png" onclick="currentSlide(2)" alt="Back side">
         </div>
 
         <div class="lightbox_column">
-            <img class="demo" src="img/Alan Trajan/front cover.jpg" onclick="currentSlide(3)" alt="Mountains">
+            <img class="demo" src="img/Alan Trajan/front cover.jpg" onclick="currentSlide(3)" alt="Front Cover">
         </div>
 
         <div class="lightbox_column">
-            <img class="demo" src="img/Alan Trajan/side1.png" onclick="currentSlide(4)" alt="Lights">
+            <img class="demo" src="img/Alan Trajan/side1.png" onclick="currentSlide(4)" alt="Side 1">
         </div>
 
         <div class="lightbox_column">
-            <img class="demo" src="img/Alan Trajan/side2.png" onclick="currentSlide(5)" alt="Lights">
+            <img class="demo" src="img/Alan Trajan/side2.png" onclick="currentSlide(5)" alt="Side 2">
         </div>
     </div>
 </div>
