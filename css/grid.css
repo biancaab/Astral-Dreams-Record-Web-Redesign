@@ -1,0 +1,222 @@
+/* Due to the difficulty of constructing a reliable responsive logic without an external library like bootstrap,
+I decided to imitate their logic using the CSS grid.
+Just like bootstrap, I divided the transition point into 4 points which described by the following symbols: XS, SM, MD and LG.
+
+XS starts from 0px to 767px, roughly similar to small iphone screen
+SM starts from 768px to 991px, roughly around 5-6 inches monitor to tablet
+MD starts from 992px to 1119px, roughly around desktop monitor
+LG starts from 1200px and beyond, television or a desktop with multi monitor setup */
+
+.row{
+    display: grid;
+    /* 
+    Based on my understanding, repeat(12, 1fr) means the screen will be divided into 12 equally sized parts which repeated 12 times
+    repeat(12, 1fr) -> 1fr x 12, the 12 columns "capacity" will be taken on each column (the col-*-* class)
+    if I want to make 3 columns with equal sizes that span from left to right, then we need to declare it 4 4 4, 
+    which represented by what kind of view we are aiming for.
+
+    If for instance, I want to make a 3 column of equal width in desktop view, then I have to utilize col-md-4 three times, which consumed exactly 12 columns of "reserves"
+    that we already declared here.
+
+    And in order to be able to utilize this feature, I need the display as a grid or otherwise, the mechanics won't work
+
+    The col classes are ought to be used in one element, for instance, a div with col-xs, col-sm and col-md means, this div will take X columns when in XS, in SM or MD.
+    This is important for constructing the div skeletons of every page.
+    
+    */
+    grid-template-columns: repeat(12, 1fr); 
+    grid-gap: 20px; 
+}
+
+@media (min-width: 0) {
+    .padding-left-xs-fix{
+        padding-left: 30px;
+    }
+    .col-xs-1 {
+        grid-column: span 1;
+    }
+    .col-xs-2 {
+        grid-column: span 2;
+    }
+    .col-xs-3 {
+        grid-column: span 3;
+    }
+    .col-xs-4 {
+        grid-column: span 4;
+    }
+    .col-xs-5 {
+        grid-column: span 5;
+    }
+    .col-xs-6 {
+        grid-column: span 6;
+    }
+    .col-xs-7 {
+        grid-column: span 7;
+    }
+    .col-xs-8 {
+        grid-column: span 8;
+    }
+    .col-xs-9 {
+        grid-column: span 9;
+    }
+    .col-xs-10 {
+        grid-column: span 10;
+    }
+    .col-xs-11 {
+        grid-column: span 11;
+    }
+    .col-xs-12 {
+        grid-column: span 12;
+    }
+
+}
+   
+@media (min-width: 768px) {
+    .padding-left-sm-fix{
+        padding-left: 30px;
+    }
+    .col-sm-1 {
+        grid-column: span 1;
+    }
+    .col-sm-2 {
+        grid-column: span 2;
+    }
+    .col-sm-3 {
+        grid-column: span 3;
+    }
+    .col-sm-4 {
+        grid-column: span 4;
+    }
+    .col-sm-5 {
+        grid-column: span 5;
+    }
+    .col-sm-6 {
+        grid-column: span 6;
+    }
+    .col-sm-7 {
+        grid-column: span 7;
+    }
+    .col-sm-8 {
+        grid-column: span 8;
+    }
+    .col-sm-9 {
+        grid-column: span 9;
+    }
+    .col-sm-10 {
+        grid-column: span 10;
+    }
+    .col-sm-11 {
+        grid-column: span 11;
+    }
+    .col-sm-12 {
+        grid-column: span 12;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .padding-left-md-fix{
+        padding-left: 30px;
+    }
+    .col-md-1 {
+        grid-column: span 1;
+    }
+    .col-md-2 {
+        grid-column: span 2;
+    }
+    .col-md-3 {
+        grid-column: span 3;
+    }
+    .col-md-4 {
+        grid-column: span 4;
+    }
+    .col-md-5 {
+        grid-column: span 5;
+    }
+    .col-md-6 {
+        grid-column: span 6;
+    }
+    .col-md-7 {
+        grid-column: span 7;
+    }
+    .col-md-8 {
+        grid-column: span 8;
+    }
+    .col-md-9 {
+        grid-column: span 9;
+    }
+    .col-md-10 {
+        grid-column: span 10;
+    }
+    .col-md-11 {
+        grid-column: span 11;
+    }
+    .col-md-12 {
+        grid-column: span 12;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .padding-left-lg-fix{
+        padding-left: 30px;
+    }
+    .col-lg-1 {
+        grid-column: span 1;
+    }
+    .col-lg-2 {
+        grid-column: span 2;
+    }
+    .col-lg-3 {
+        grid-column: span 3;
+    }
+    .col-lg-4 {
+        grid-column: span 4;
+    }
+    .col-lg-5 {
+        grid-column: span 5;
+    }
+    .col-lg-6 {
+        grid-column: span 6;
+    }
+    .col-lg-7 {
+        grid-column: span 7;
+    }
+    .col-lg-8 {
+        grid-column: span 8;
+    }
+    .col-lg-9 {
+        grid-column: span 9;
+    }
+    .col-lg-10 {
+        grid-column: span 10;
+    }
+    .col-lg-11 {
+        grid-column: span 11;
+    }
+    .col-lg-12 {
+        grid-column: span 12;
+    }
+
+}
+
+/* Offset class is used to push content from the left to the right, so basically, offset-1 is taking 1 of 12 columns because it starts on 1 and ends in 1
+Offset class starts in 1 and ends in 2, therefore it's like taking 2 of 12 available columns, etc
+I made the offset to 4 because I think this is all I need for this project */
+
+.offset-1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+}
+.offset-2 {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+.offset-3 {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+}
+.offset-4 {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+}

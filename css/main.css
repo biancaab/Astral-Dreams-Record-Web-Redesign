@@ -1,0 +1,115 @@
+.gallery_display{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery_display:hover{
+    cursor: pointer;
+}
+
+.gallery_label_add_to_cart{
+    top: -140px;
+    width: 80px;
+    font-size: 8px;
+    align-items: center;
+    opacity: 0.7;
+    color: black;
+    background-color: grey;
+    position: absolute;
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+}
+
+.image_container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.gallery_display_frontpage{
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.image_text_top_left{
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.image_text_top_left a{
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.tracklist{
+    height: 20px; 
+    background-color: white; 
+    color: black; 
+    border: 1px solid black; 
+    padding: 20px; 
+    margin: 0 auto;
+}
+
+.tracklist_content{
+    margin: -10px 0px 0px -10px;
+}
+
+/* .tracklist_number{
+    background-color: white; 
+    border:2px solid black; 
+    border-radius: 50%; 
+    color: black; 
+    padding: 2px 9px;
+    
+} */
+
+.tracklist_number{
+    width: 25px;
+    line-height: 21px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.sort_hide {
+    display: none;
+}
+
+.sort_hide:hover {
+    display: block;
+}
+  
+.sort_catalog:hover + .sort_hide {
+    display: block;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .hide-on_mobile{
+        display: none !important;
+    }
+
+    /* In case there's an overflowing margin in mobile view, this class will reset the margin to 0 therefore removing unecessary gap in the mobile view */
+    .no_margin_mobile{
+        margin: 0 auto !important;
+    }
+
+    .adjust-h2-dummy-margin-top{
+        margin-top: -50px;
+    }
+
+    .gallery_display{
+        width: 100%;
+        height: auto;
+    }
+
+}
+

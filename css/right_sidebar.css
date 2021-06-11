@@ -1,0 +1,120 @@
+/* The mechanics of the right sidebar (shopping cart) is identical with the left sidebar, the difference is in the button to trigger the sidebar, 
+instead of floating div, the right sidebar utilizes the cart icon in the top right.
+
+The main difference of the side, left or right only lies in one variable, in the #right_sidebarMenu, the attribute right 0 is very crucial, left sidebar is using left 0. */
+
+.right_main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.right_mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.right_mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+
+
+@media (min-width: 0){
+    #right_sidebarMenu {
+        height: 100%;
+        position: fixed;
+        right: 0;
+        width: 100vw;
+        transform: translateX(100vw);
+        transition: transform 250ms ease-in-out;
+        /* background-image: url('../img/gradient-background.jpg'); */
+        background-color: grey;
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 768px){
+    #right_sidebarMenu {
+        height: 100%;
+        position: fixed;
+        right: 0;
+        width: 100vw;
+        transform: translateX(100vw);
+        transition: transform 250ms ease-in-out;
+        /* background-image: url('../img/gradient-background.jpg'); */
+        background-color: grey;
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 992px){
+    #right_sidebarMenu {
+        height: 100%;
+        position: fixed;
+        right: 0;
+        width: 350px;
+        transform: translateX(350px);
+        transition: transform 250ms ease-in-out;
+        /* background-image: url('../img/gradient-background.jpg'); */
+        background-color: grey;
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 1200px){
+    #right_sidebarMenu {
+        height: 100%;
+        position: fixed;
+        right: 0;
+        width: 350px;
+        transform: translateX(350px);
+        transition: transform 250ms ease-in-out;
+        /* background-image: url('../img/gradient-background.jpg'); */
+        background-color: grey;
+        z-index: 1000;
+    }
+}
+
+
+
+.right_sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.right_sidebarMenuInner li{
+    list-style: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.right_sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.right_sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+#right_openSidebarMenu:checked ~ #right_sidebarMenu {
+    transform: translateX(0);
+}
+
+#right_openSidebarMenu {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+

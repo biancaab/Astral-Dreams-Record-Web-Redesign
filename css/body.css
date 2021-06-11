@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* I utilize the new CSS grid for the whole responsive mechanism in this project, therefore i have to set the whole body as grid, hence display grid */
+
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'arial';
+    background-color: #1c1c1c;
+}
+
+/* I have to separate viewport section for a page that requires to have full height during desktop view and 
+a page that might adjust according to the actual height during mobile view.
+The first one is a section (a full-width div) with 100vh height which technically means a literal height from top to button of our current browser view,
+and the one with 73vh minimum height is used for the mobile version where every section is assumed in 73vh no matter how empty the content of the section is, 
+the odd number is important due to the height of the footer  */
+
+.section_fixed_viewport{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #1c1c1c;
+}
+
+.section_no_viewport{
+    width: 100%;
+    min-height: 73vh;
+    /* height: 120vh; */
+    padding: 20px;
+    background-color: #1c1c1c;
+}
+
+/* Content1 is the first section in the home page */
+
+#content1{
+    margin-top: 92vh;
+    height: 108vh;
+    padding: 100px 50px 50px 50px;
+    background-color: #1c1c1c;
+}
+
+/* A footer with background, fixed yet responsive size */
+
+.footer{
+    margin-top: 150px;
+    left: 0;
+    bottom: 0;
+    height: 20vh;
+    background-image: url('../img/gradient-background.jpg');
+    background-size: 100vw 20vh;
+}
+
+/* Media query for responsive purpose  */
+@media (max-width: 600px) {
+    /* Mobile view requires a section to have an automatic height instead of fixed one because the content (also their height) is variable */
+    .section{
+        height: auto;
+    }
+
+    #content1{
+        height: auto;
+        padding: 50px 50px 50px 50px;
+        background-color: #1c1c1c;
+    }
+
+    /* Change of height in mobile view due to the content that transformed from horizontal to vertical, 
+    sometimes the background also either repeating or clipping, therefore non repeating background is mandatory */
+
+    .footer{
+        left: 0;
+        bottom: 0;
+        height: auto;
+        background-image: url('../img/gradient-background-dark-blue.jpg');
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+    }
+}

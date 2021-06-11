@@ -1,0 +1,30 @@
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  [type="radio"]:checked+label,
+  [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 2px;
+  }
+  
+  [type="radio"]:not(:checked)+label {
+    border: 1px solid #dfdfd7;
+    color: #9b9b94;
+    background: #e9eae4;
+  }
+  
+  [type="radio"]:not(:checked)+label:hover {
+    background: #eee;
+  }
+  
+  [type="radio"]:checked+label {
+    background: #369ff4;
+    border-color: #369ff4;
+    color: #fff;
+  }

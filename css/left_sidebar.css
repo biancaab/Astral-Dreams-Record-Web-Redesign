@@ -1,0 +1,58 @@
+/* First of all, this is the logic of how this sidebar slideout works, 
+the entire sidebar is visible although it is located out of the leftmost part of the visible view.
+
+#sidebarMenu contains the entire left sidebar that might scrolls to the right (appearing) after .openSidebarMenu checkbox checked.
+However, the checkbox will be checked not through manual checking but rather through a div that acts as a button that floating in the left part of the monitor.
+Every single time that div in the left is clicked, there's a javascript script that checks/unchecks the .openSidebarMenu, hence closing/opening the sidebar. 
+In order to close an opened sidebar, it is impossible to reach the left floating div, therefore another button to close the sidebar is added.
+
+*/
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 350px;
+    /* Transform attribute is the key factor to move the sidebar, 
+    it allows the div to move the X (horizontal) -350px to the left which looks as if the div is disappearing/scrolling to the left */
+    transform: translateX(-350px); 
+    transition: transform 250ms ease-in-out;
+	background-image: url('../img/gradient-background.jpg');
+	z-index: 1000;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+#openSidebarMenu:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+#openSidebarMenu {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
